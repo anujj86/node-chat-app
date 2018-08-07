@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+    "materialize-css": "^1.0.0-rc.2",
     "socket.io": "^2.1.1"
   },
   "devDependencies": {
