@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
@@ -12,54 +13,55 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
+
   </head>
-  <body>
-    <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <h4 class="red-text text-lighten-1 center-align">Welcome to chat app</h4>
+  <body class="chat">
+    <div class="container-fluid width">
+    <div class="row" style="margin-bottom: 0px">
+      <div class="col s2 xl2 chat__sidebar">
+        <h4>People</h4>
+        <div class="" id="users">
+
+        </div>
       </div>
-    </div>
+      <div class="col s10 xl10">
+        <div class="col s6 xl6">
+          <label for="messages">Messages</label>
+          <ul class="collection chat__messages" id="messages">
+          </ul>
+        </div>
+        <div class="col s6 xl6">
+          <label for="Locations">My Locations</label>
+          <ul class="collection chat__messages" id="Locations">
+          </ul>
+        </div>
+      </div>
 
-    <div class="row">
-    <form class="col s12" id="message-form">
-        <div class="row">
-          <div class="input-field col s6 offset-s3">
-            <input id="Username" name="username" type="text" class="validate" required>
-            <label class="active" for="Username">UserName</label>
-          </div>
+        <form class="col s10" id="message-form">
+                <span class="input-field col s4">
+                  <input id="Username" name="username" type="text" class="validate" required>
+                  <label class="active" for="Username">UserName</label>
+                </span>
+
+                <span class="input-field col s8 ">
+                  <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+                <label for="message">Message</label>
+              </span>
+
+                <span class="col s4">
+                  <button class="btn waves-effect red darken-1"  type="submit" name="action">Send
+                    <i class="material-icons right">send</i>
+                  </button>
+                  <button class="btn waves-effect blue darken-1" id="send-location"  type="button" name="action">Send Location
+                    <i class="material-icons right">send</i>
+                  </button>
+                </span>
+          </form>
         </div>
-        <div class="row">
-          <div class="input-field col s6 offset-s3">
-            <textarea id="message" name="message" class="materialize-textarea" required></textarea>
-          <label for="message">Message</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s6 offset-s3">
-            <button class="btn waves-effect red darken-1"  type="submit" name="action">Send
-              <i class="material-icons right">send</i>
-            </button>
-            <button class="btn waves-effect blue darken-1" id="send-location"  type="button" name="action">Send Location
-              <i class="material-icons right">send</i>
-            </button>
-          </div>
-        </div>
-    </form>
+      </div>
   </div>
 
-  <div class="row">
-    <div class="col s6">
-      <label for="messages">Messages</label>
-      <ul class="collection" id="messages">
-      </ul>
-    </div>
-    <div class="col s6">
-      <label for="Locations">My Locations</label>
-      <ul class="collection" id="Locations">
-      </ul>
-    </div>
-  </div>
+
 
 </div>
 
