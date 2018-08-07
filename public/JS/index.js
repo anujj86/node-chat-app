@@ -22,17 +22,18 @@ socket.on('disconnect', function () {
 // });
 
 socket.on('newMessage', function (message) {
-  console.log('newMessage', message );
+  var formattedTime = moment(message.createdAt).format('h:mm a');
   var li = jQuery('<li class="indigo-text text-lighten-1" style="margin-left: 10px"></li>');
-  li.text(`${message.from} : ${message.text}`);
+  li.text(`${message.from} : ${message.text} : ${formattedTime}`);
   jQuery('#messages').append(li);
 });
 
 
 socket.on('newLocationMessage', function (message) {
+  var formattedTime = moment(message.createdAt).format('h:mm a')
   var li = jQuery('<li class="indigo-text text-Darken-1" style="margin-left: 10px"></li>');
   var a = jQuery('<a target="_blank">My current Location</>')
-  li.text(`${message.from} | `);
+  li.text(`${message.from} | ${formattedTime} | `);
   a.attr('href', message.url);
   li.append(a);
   jQuery('#Locations').append(li);
@@ -75,15 +76,3 @@ locationButton.on('click', function () {
     M.toast({html: 'unable to fetch Location'});
   });
 });
-
-
-
-
-
-(function($){
-        $(function(){
-
-          $('.button-collapse').sideNav();
-
-        }); // end of document ready
-      })(jQuery); // end of jQuery name space
