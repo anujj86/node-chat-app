@@ -104,11 +104,11 @@ h4 {
   width: 100%;
 }
 
-.chat__messages {
+/* .chat__messages {
   flex-grow: 1;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-}
+} */
 
 .chat__footer {
   background: #e6eaee;
@@ -136,7 +136,9 @@ h4 {
 .chat__messages {
   list-style-type: none;
   padding: 10px;
-  height: 80vh
+  height: 80vh;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 .message {
