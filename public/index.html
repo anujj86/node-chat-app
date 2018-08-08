@@ -65,10 +65,18 @@
 
 </div>
 
+    <script type="text/template" id="message-template">
+      <p class="indigo-text text-darken-1" style="padding-left: 10px"><span style="font-weight: bold">{{from}} : </span>{{text}} <span class="indigo-text text-lighten-3" style="float: right">{{createdAt}}</span></p>
 
+    </script>
+    <script type="text/template" id="location-template">
+      <p class="indigo-text text-darken-1" style="padding-left: 10px"><span style="font-weight: bold">{{from}} : </span><a href="{{href}}" target="_blank">My current location</a><span class="indigo-text text-lighten-3" style="float: right">{{createdAt}}</span></p>
+
+    </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/JS/libs/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="/JS/libs/moment.min.js" type="text/javascript"></script>
+    <script src="/JS/libs/mustache.js" type="text/javascript"></script>
     <script src="/JS/index.js" type="text/javascript"></script>
   </body>
 </html>
